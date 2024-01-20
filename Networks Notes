@@ -1,0 +1,61 @@
+Network Models:
+Networks allow hosts/computers to share and access contents.
+Sharer - Server
+Accessor - Client
+
+NIC - Network Interface Card
+What is NIC?
+It is an interface between the PC and the Network. In older systems it was seperate but now it comes integrated with the motherboard.
+They are categorized in the layer 1 or 2 by different experts.
+NIC's contain a unique 48 bit identifier called the Media Access Control Address (MAC Address)
+MAC Addresses are always represented in Hexadecimal.
+First 6 digits are the OUI(Organizationally Unique Identifier) and the last 6 digits are the device ID.
+
+Windows uses " - "  as a delimiter and Linux and Mac use " : " 
+
+Windows : ipconfig/all 
+MAC OS : ifconfig
+Linux : ip a
+displays the MAC Address of the device. It is called "Physical Address" by the ipconfig. "Link/Ether" by the Linux.
+
+NIC's send and recieve the binary data as pulses of electricity, light or radio waves.
+
+All networks transmit data by breaking them into discrete chunks called Frames.
+Frames encapsulate information and data for easier transmission.
+This is where the MAC is important:
+_________________________________________________________________
+|  Reciepient's MAC  |  Sender's MAC  |  Type  |  Data  |  FCS  |
+_________________________________________________________________
+This is a Frame.
+
+FCS: Frame Check Sequence. uses Cyclic Redundancy Check to verify data.
+
+NIC has 2 jobs 1. Transmit data through the cable. 2. Frame encapsulation, Src and Dst MAC Addresses get added to the frame and error checking.
+
+The model to visualize/ conceptualize the many parts of network is OSI - Open Systems Interconnection Model
+It is a 7 layer model
+
+How does it help?
+1. Mental tool for diagnosis
+2. Common language for network issues
+
+7 layers are:
+1. Physical : defines methods of moving data between computers. i.e) Hardwares like Cables, Central Box/Hubs are a part of physical layer
+
+2. Data Link : Has 2 sublayers - MAC SubLayer and Logical Link Control SubLayer. NIC sits on the MAC sublayer(In a sense) . The LLC talks to the OS using the device drivers. It offers multiple network protocols and flow control.
+
+When the network becomes large, there comes a need to introduce logical addressing. This enables us to break the large networks into smaller pieces of networks called Subnets.
+
+A Network Protocal is used to create unique identifier for each system and also a set of rules for issue handling.
+
+3. Network : Containers called Packets are created and addressed so they can be transferred between networks. A unique address called the IP Address is given to each each device on the network. IP address is a logical address.
+
+4. Transport
+5. Session
+6. Presentation
+7. Application
+
+Mnemonic : Please Do Not Throw Sausage Pizza Away
+
+
+ 
