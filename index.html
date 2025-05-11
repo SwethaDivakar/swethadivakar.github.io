@@ -9,35 +9,24 @@
       font-family: Georgia, serif;
       margin: 0;
       padding: 0;
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: #fdf6ec;
+      color: #0f172a;
     }
     header {
-      background-color: #064e3b;
-      color: #f0fdf4;
+      background-color: #d1fae5;
+      color: #065f46;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
-    .typing {
+    header p {
+      margin-top: 0.5rem;
       font-size: 1.2rem;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid #a7f3d0;
-      animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
-      color: #a7f3d0;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: #a7f3d0; }
+      color: #047857;
     }
     .profile-pic {
       width: 140px;
@@ -45,7 +34,7 @@
       border-radius: 50%;
       object-fit: cover;
       margin-top: 1rem;
-      border: 3px solid #a7f3d0;
+      border: 3px solid #34d399;
     }
     section {
       padding: 2rem;
@@ -53,45 +42,25 @@
       margin: auto;
     }
     h2 {
-      border-bottom: 2px solid #16a34a;
+      border-bottom: 2px solid #10b981;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
-      color: #bbf7d0;
+      color: #065f46;
     }
     footer {
       text-align: center;
       padding: 1.5rem;
-      background-color: #064e3b;
-      color: #bbf7d0;
+      background-color: #d1fae5;
+      color: #065f46;
       margin-top: 2rem;
       font-size: 0.9rem;
     }
     a {
-      color: #4ade80;
+      color: #065f46;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
-    }
-    .toggle-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #4ade80;
-      color: #0f172a;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .dark-mode {
-      background-color: #f8fafc;
-      color: #0f172a;
-    }
-    .dark-mode header {
-      background-color: #a7f3d0;
-      color: #064e3b;
     }
     .grid-projects {
       display: grid;
@@ -99,19 +68,17 @@
       gap: 1.5rem;
     }
     .project-card {
-      border: 1px solid #4ade80;
+      border: 1px solid #10b981;
       padding: 1.5rem;
       border-radius: 0.75rem;
-      background: rgba(255, 255, 255, 0.05);
+      background: #ffffff;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Theme</button>
-
   <header>
     <h1>Swetha Divakar</h1>
-    <p class="typing">Cybersecurity Enthusiast | Python Developer | Tech Explorer</p>
+    <p>Cybersecurity Enthusiast | Python Developer | Tech Explorer</p>
     <img src="Profile.png" alt="Swetha Divakar" class="profile-pic" />
   </header>
 
@@ -145,15 +112,5 @@
   <footer>
     <p>&copy; 2025 Swetha Divakar. All rights reserved.</p>
   </footer>
-
-  <script>
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-    document.querySelector('.toggle-btn').addEventListener('click', () => {
-      const isDark = document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  </script>
 </body>
 </html>
