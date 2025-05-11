@@ -23,10 +23,21 @@
       margin: 0;
       font-size: 2.5rem;
     }
-    header p {
-      margin-top: 0.5rem;
+    .typing {
       font-size: 1.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #a7f3d0;
+      animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
       color: #a7f3d0;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #a7f3d0; }
     }
     .profile-pic {
       width: 140px;
@@ -38,7 +49,7 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
@@ -46,9 +57,6 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
       color: #bbf7d0;
-    }
-    .project {
-      margin-bottom: 2rem;
     }
     footer {
       text-align: center;
@@ -65,12 +73,45 @@
     a:hover {
       text-decoration: underline;
     }
+    .toggle-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #4ade80;
+      color: #0f172a;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .dark-mode {
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .dark-mode header {
+      background-color: #a7f3d0;
+      color: #064e3b;
+    }
+    .grid-projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      border: 1px solid #4ade80;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+    }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Theme</button>
+
   <header>
     <h1>Swetha Divakar</h1>
-    <p>Cybersecurity Enthusiast | Python Developer | Tech Explorer</p>
+    <p class="typing">Cybersecurity Enthusiast | Python Developer | Tech Explorer</p>
     <img src="Profile.png" alt="Swetha Divakar" class="profile-pic" />
   </header>
 
@@ -81,18 +122,18 @@
 
   <section>
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Password Strength Checker</h3>
-      <p>A simple CLI tool that uses regex to evaluate password security and provide user-friendly feedback.</p>
-      <a href="https://github.com/swethadivakar/password-checker" target="_blank">View on GitHub</a>
+    <div class="grid-projects">
+      <div class="project-card">
+        <h3>Password Strength Checker</h3>
+        <p>CLI tool that uses regex to evaluate password security and provide user-friendly feedback.</p>
+        <a href="https://github.com/swethadivakar/password-checker" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Trivy Vulnerability Scanning Lab</h3>
+        <p>Used Trivy to scan Docker images and Ubuntu host system for vulnerabilities, secrets, and misconfigurations.</p>
+        <a href="https://github.com/swethadivakar/trivy-vulnerability-scanning-lab" target="_blank">View on GitHub</a>
+      </div>
     </div>
-    <div class="project">
-      <h3>Trivy Vulnerability Scanning Lab</h3>
-      <p>Used Trivy to scan Docker images and Ubuntu host system for vulnerabilities, secrets, and misconfigurations. Part of a hands-on DevSecOps lab setup built with Docker and Ubuntu Server.</p>
-      <a href="https://github.com/swethadivakar/trivy-vulnerability-scanning-lab" target="_blank">View on GitHub</a>
-    </div>
-
-    <!-- Add more projects as you grow! -->
   </section>
 
   <section>
@@ -104,5 +145,15 @@
   <footer>
     <p>&copy; 2025 Swetha Divakar. All rights reserved.</p>
   </footer>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+    document.querySelector('.toggle-btn').addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
