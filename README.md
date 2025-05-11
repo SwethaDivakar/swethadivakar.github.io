@@ -28,6 +28,12 @@ I'm **Swetha Divakar**, a detail-oriented IT professional with over 5 years of e
 - Platforms: `ServiceNow`, `JIRA`, `SAP SuccessFactors`, `Azure`, `Splunk`, `LDAP`
 - Concepts: `IAM`, `ITIL`, `Incident Management`, `Cybersecurity Compliance`
 
+🧪 DevSecOps Projects
+
+- [🔍 Trivy Vulnerability Scanning Lab](https://github.com/SwethaDivakar/trivy-vulnerability-scanning-lab)  
+  Scanned Docker images and Linux host with Trivy to detect vulnerabilities, secrets, and system misconfigurations.
+
+
 📫 Contact Me
 
 - Email: [swe.divakar@gmail.com](mailto:swe.divakar@gmail.com)
