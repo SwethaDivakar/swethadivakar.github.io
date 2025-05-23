@@ -22,6 +22,20 @@ I'm **Swetha Divakar**, a detail-oriented IT professional with over 5 years of e
 - Academic and industry-based **projects**
 - Clean and readable **documentation**
 
+  ---
+
+## ✍️ Medium Blog: Tech for Neurodivergent Minds
+
+- 📝 Blog: [@chaoticjumbledmess](https://medium.com/@chaoticjumbledmess)  
+  A beginner-friendly blog breaking down cybersecurity, cloud, and tech career topics through a neurodivergent-friendly lens.
+
+**Current & Upcoming Posts:**
+- *CIA Triad in Plain English*  
+- *Building a Home Lab Without the Burnout*  
+- *The ADHD-Friendly AWS Study Plan*
+
+---
+
 🛠 Tools & Tech
 
 - Languages: `Python`, `SQL`, `Bash`
@@ -38,5 +52,6 @@ I'm **Swetha Divakar**, a detail-oriented IT professional with over 5 years of e
 
 - Email: [swe.divakar@gmail.com](mailto:swe.divakar@gmail.com)
 - LinkedIn: [linkedin.com/in/swetha-divakar-profile](https://linkedin.com/in/swetha-divakar-profile)
+- Medium: [medium.com/@chaoticjumbledmess](https://medium.com/@chaoticjumbledmess)
 
 Thanks for visiting my GitHub! Feel free to check out my work and reach out for collaborations, opportunities, or just to connect 😊
